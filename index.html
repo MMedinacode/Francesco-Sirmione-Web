@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- DEMO de venta, no el sitio oficial del local. Lleva nombre, resenas y
+     horario reales, por eso va con noindex. Se quita si el local contrata. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caffé Francesco Sirmione · Cocina italiana y helados en Maipú</title>
+<meta name="description" content="Caffé Francesco Sirmione — comida italiana, café y helados artesanales en Pje. Curaco 1567, Maipú. 4.8★ en Google. Abrimos a las 17:00.">
+
+<!--
+  ============================================================
+  DEMO — CAFFÉ FRANCESCO SIRMIONE (Pje. Curaco 1567, Maipú)
+
+  ✅ DATOS REALES VERIFICADOS (10-09-2026)
+  - Google Maps: 4.8★, 15 opiniones, Cafetería.
+  - Dirección: Pje. Curaco 1567, 9250000 Maipú.
+  - Teléfono: 9 3750 3451.
+  - Place ID real: 0x9662ddd1460f5d41:0x46277ed5b3f531fd
+  - Coordenadas: -33.5484045, -70.7610977
+  - ABRE A LAS 17:00 (confirmado por Google). Por eso el sitio es de tema
+    OSCURO: es un café de tarde-noche y su identidad son los letreros de
+    neón. No es una decisión estética arbitraria.
+  - Rango informado en Google por 4 personas: $5.000–10.000 por persona.
+    Es un dato agregado de Google, NO una carta.
+  - Servicios confirmados: consumo en el lugar y para llevar.
+  - 3 reseñas reales con nombre.
+  - Fotos: fotos propias del local publicadas en su ficha de Google.
+  - Productos confirmados por sus reseñas: sándwich de la casa, comida
+    italiana, café, y un helado de limonada con albahaca y menta.
+
+  ⚠️ PENDIENTE / NUNCA INVENTADO:
+  - HORARIO: Google solo confirma la hora de apertura (17:00). El cierre y
+    los días NO están publicados. El indicador usa 17:00–23:00 como
+    estimación y así se declara. CONFIRMAR CON EL LOCAL.
+  - PRECIOS: no publican carta. Los productos van sin precio.
+  - WhatsApp no confirmado: se usa tel:, no wa.me.
+  - No se encontró Instagram. Verificar si tienen.
+  - Falta el logo real en buena resolución.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-taza" aria-hidden="true">
+    <svg viewBox="0 0 64 64" width="50" height="50">
+      <path d="M10 22h34v18a14 14 0 0 1-14 14h-6a14 14 0 0 1-14-14z" fill="currentColor"/>
+      <path d="M44 27h5a7 7 0 0 1 0 14h-5" fill="none" stroke="currentColor" stroke-width="4"/>
+    </svg>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <button class="brand" data-tab="inicio">
+      <span class="brand-ico" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="22" height="22">
+          <path d="M10 22h34v18a14 14 0 0 1-14 14h-6a14 14 0 0 1-14-14z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand-name">Francesco Sirmione</span>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <button class="nav-link active" data-tab="inicio">Inicio</button>
+      <button class="nav-link" data-tab="nosotros">Nosotros</button>
+      <button class="nav-link" data-tab="carta">Carta</button>
+      <button class="nav-link" data-tab="resenas">Reseñas</button>
+      <button class="nav-link" data-tab="visitanos">Visítanos</button>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-solid btn-sm" href="tel:+56937503451">Llamar</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= INICIO ================= -->
+<section class="tab-panel active" data-tab-panel="inicio">
+  <div class="hero">
+    <div class="hero-photo">
+      <img src="fotos/local-neon.jpg" alt="Caffé Francesco Sirmione de noche, con su letrero de neón sobre el muro de hiedra y la vitrina de helados">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Comida italiana · Café · Helados · Maipú</p>
+      <h1 class="reveal">Caffé Francesco Sirmione</h1>
+      <p class="hero-lead reveal">
+        Cocina italiana de verdad, café y helados artesanales en Pje. Curaco 1567.
+        Abrimos cuando cae la tarde.
+      </p>
+
+      <div class="hero-pills reveal">
+        <span class="pill"><span class="status-dot" id="statusDot"></span><span id="statusText">Consultando horario…</span></span>
+        <span class="pill">★ <strong>4.8</strong> · 15 opiniones en Google</span>
+        <span class="pill">🇮🇹 Cocina italiana</span>
+      </div>
+
+      <div class="hero-ctas reveal">
+        <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
+        <button class="btn btn-ghost" data-tab="visitanos">Cómo llegar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="eyebrow-row reveal">
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2 class="section-title">Italia, en un pasaje de Maipú</h2>
+      </div>
+      <div class="pilares">
+        <article class="info-card reveal">
+          <div class="pilar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14 12 6l8 8z"/><path d="M4 14h16v4H4z"/></svg></div>
+          <h3>El sándwich de la casa</h3>
+          <p>"Recomiendo el sándwich de la casa, un sabor que no satura" — cita textual de una reseña real.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="pilar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M7 12l5 10 5-10"/></svg></div>
+          <h3>Helados artesanales</h3>
+          <p>"El helado de limonada, albahaca, menta: ¡increíble!" — otra cita textual de sus reseñas.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="pilar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h2a2.5 2.5 0 0 1 0 5h-2"/></svg></div>
+          <h3>Café impecable</h3>
+          <p>"Un impecable café y excelente servicio", dicen sus clientes. Con música y ambiente de tarde.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NOSOTROS ================= -->
+<section class="tab-panel" data-tab-panel="nosotros">
+  <div class="section">
+    <div class="wrap">
+      <div class="eyebrow-row reveal">
+        <span class="eyebrow">Quiénes somos</span>
+        <h2 class="section-title">Un caffè que abre de tarde</h2>
+      </div>
+      <div class="nosotros-grid">
+        <div class="nosotros-text reveal">
+          <p class="lead">
+            Caffé Francesco Sirmione no es una cafetería de desayuno: <strong>abre a las
+            cinco de la tarde</strong>, cuando se encienden los neones sobre el muro de
+            hiedra y la vitrina de helados.
+          </p>
+          <p>
+            Adentro hay <strong>cocina italiana de verdad</strong>, café y helados hechos en
+            casa. Y algo que sus clientes destacan: muchas veces atiende el propio dueño.
+            "Me atendió el mismo dueño, me ayudó a escoger, todo es de mucha calidad y a
+            buen precio", dice una de sus reseñas.
+          </p>
+          <div class="badges reveal">
+            <span class="badge">4.8★ · 15 opiniones</span>
+            <span class="badge">Cocina italiana</span>
+            <span class="badge">Helados propios</span>
+            <span class="badge">Consumo en el lugar</span>
+            <span class="badge">Para llevar</span>
+          </div>
+        </div>
+        <div class="nosotros-fotos reveal">
+          <figure class="foto-grande">
+            <img src="fotos/local-neon.jpg" alt="Fachada de noche de Caffé Francesco Sirmione" loading="lazy">
+            <figcaption>Los neones, al caer la tarde</figcaption>
+          </figure>
+          <figure><img src="fotos/producto1.jpg" alt="Producto de Caffé Francesco Sirmione" loading="lazy"></figure>
+          <figure><img src="fotos/producto2.jpg" alt="Rincón de Caffé Francesco Sirmione" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARTA ================= -->
+<section class="tab-panel" data-tab-panel="carta">
+  <div class="section">
+    <div class="wrap">
+      <div class="eyebrow-row reveal">
+        <span class="eyebrow">La carta</span>
+        <h2 class="section-title">Nuestra carta</h2>
+        <p class="section-sub">
+          Arma tu pedido y consúltanos. Según el dato que Google recoge de
+          4 clientes, el gasto promedio va entre $5.000 y $10.000 por persona.
+        </p>
+      </div>
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Categorías de la carta"></div>
+      <div id="menuPanels"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEÑAS ================= -->
+<section class="tab-panel" data-tab-panel="resenas">
+  <div class="section">
+    <div class="wrap">
+      <div class="eyebrow-row reveal">
+        <span class="eyebrow">Lo que dicen</span>
+        <h2 class="section-title">4.8 / 5 · 15 opiniones en Google</h2>
+      </div>
+      <div class="resenas-grid">
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p>"Excelente lugar, buena música, comida italiana real, excelente café, excelente
+             sándwich — recomiendo el sándwich de la casa, un sabor que no satura. El helado
+             de limonada, albahaca, menta: ¡increíble!"</p>
+          <footer><span class="avatar" aria-hidden="true">PG</span>
+            <span class="review-meta"><strong>Patricia Galleguillos Corona</strong>Local Guide · hace un año</span></footer>
+        </article>
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p>"Es un lugar muy acogedor, con una excelente gastronomía inspirada en Italia,
+             un impecable café y excelente servicio."</p>
+          <footer><span class="avatar" aria-hidden="true">GV</span>
+            <span class="review-meta"><strong>Gabriela Valenzuela</strong>hace un año</span></footer>
+        </article>
+        <article class="review-card reveal">
+          <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p>"Muy bueno. Me atendió el mismo dueño, me ayudó a escoger, todo es de mucha
+             calidad y a buen precio."</p>
+          <footer><span class="avatar" aria-hidden="true">EC</span>
+            <span class="review-meta"><strong>Esteban Cornejo</strong>Local Guide · hace 10 meses</span></footer>
+        </article>
+      </div>
+      <p class="review-cta-bajo reveal">
+        <a href="https://search.google.com/local/writereview?placeid=0x9662ddd1460f5d41:0x46277ed5b3f531fd" target="_blank" rel="noopener">
+          ¿Nos visitaste? Déjanos tu reseña en Google
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISÍTANOS ================= -->
+<section class="tab-panel" data-tab-panel="visitanos">
+  <div class="section">
+    <div class="wrap">
+      <div class="eyebrow-row reveal">
+        <span class="eyebrow">Visítanos</span>
+        <h2 class="section-title">Te esperamos en Pje. Curaco</h2>
+      </div>
+      <div class="visitanos-grid">
+        <div class="visitanos-info reveal">
+          <div class="dato">
+            <span class="dato-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 1 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><strong>Pje. Curaco 1567</strong><span>Maipú, Región Metropolitana</span></div>
+          </div>
+          <div class="dato">
+            <span class="dato-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div>
+              <strong>Horario</strong>
+              <span>Abrimos a las 17:00</span>
+              <span class="nota-fuente">La hora de cierre no está publicada en Google — conviene confirmarla con el local.</span>
+            </div>
+          </div>
+          <div class="dato">
+            <span class="dato-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg></span>
+            <div><strong>+56 9 3750 3451</strong><span>Teléfono publicado en su ficha de Google</span></div>
+          </div>
+          <div class="visitanos-ctas">
+            <a class="btn btn-solid" href="tel:+56937503451">Llamar al local</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Caff%C3%A9+Francesco+Sirmione+Maipu&destination_place_id=0x9662ddd1460f5d41:0x46277ed5b3f531fd" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn-ghost" href="https://waze.com/ul?ll=-33.5484045,-70.7610977&navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
+          </div>
+        </div>
+        <div class="map-frame reveal">
+          <!-- Embed REAL: place id y coordenadas de su ficha de Google (10-09-2026) -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0!2d-70.7610977!3d-33.5484045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ddd1460f5d41%3A0x46277ed5b3f531fd!2sCaff%C3%A9%20Francesco%20Sirmione!5e0!3m2!1ses-419!2scl!4v1789005540000!5m2!1ses-419!2scl"
+            loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"
+            title="Mapa de Caffé Francesco Sirmione en Pje. Curaco 1567, Maipú"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="brand-name footer-brand">Francesco Sirmione</span>
+      <p>Pje. Curaco 1567 · Maipú</p>
+      <p class="status-line"><span class="status-dot" id="statusDot2"></span> <span id="statusText2">—</span></p>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+56937503451">Teléfono</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Caff%C3%A9+Francesco+Sirmione+Maipu" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-widget">
+  <a href="tel:+56937503451" class="float-btn float-tel" aria-label="Llamar a Caffé Francesco Sirmione">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+  </a>
+</div>
+
+<script src="vida.js"></script>
+<script src="carta-fotos.js"></script>
+<script src="script.js"></script>
+<script src="carrito.js"></script>
+</body>
+</html>
