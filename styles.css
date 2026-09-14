@@ -46,6 +46,11 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:400; line-height:1.15; }
   display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .brand{ display:flex; align-items:center; gap:9px; background:none; border:none; cursor:pointer; padding:0; }
 .brand-ico{ color:var(--neon); display:flex; }
+/* Logo real del local (fondo crema, circular): se recorta redondo para que
+   no se vea el cuadrado del JPG contra la cabecera oscura. */
+.brand-ico img{ width:34px; height:34px; border-radius:50%; display:block; }
+.loader-taza img{ width:72px; height:72px; border-radius:50%; display:block;
+  box-shadow:0 6px 20px rgba(0,0,0,.5); }
 .brand-name{ font-family:var(--font-display); font-size:1.25rem; color:var(--tinta); }
 .nav-links{ display:flex; gap:4px; }
 .nav-link{ background:none; border:none; cursor:pointer; font-family:var(--font-body);

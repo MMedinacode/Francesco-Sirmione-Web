@@ -1,38 +1,59 @@
 /* ============================================================
    CAFFÉ FRANCESCO SIRMIONE — datos y lógica
    ============================================================
-   ⚠️ SIN PRECIOS. No publican carta en ningún canal. Google registra un
-   rango de gasto ($5.000–10.000 por persona, informado por 4 clientes),
-   pero es un dato agregado de Google, NO el precio de un producto: se
-   cita como tal en la pestaña Carta y nunca se asigna a un ítem.
-
-   Los productos listados salen de sus reseñas reales de Google y de las
-   fotos de su ficha. Ninguno inventado.
+   CARTA REAL (13-09-2026), transcrita de la carta oficial que el propio
+   local publica en su Instagram @cafefrancescomaipu — foto con su propio
+   logo al pie, o sea material de ellos, no de un tercero.
+   18 productos en 5 categorías, precios tal cual aparecen ahí.
    ============================================================ */
 
 const MENU = {
-  cocina: {
-    label: 'Cocina italiana',
+  caffe: {
+    label: 'Caffè',
     items: [
-      { n:'Sándwich de la casa', d:'"Recomiendo el sándwich de la casa, un sabor que no satura" — reseña real' },
-      { n:'Cocina italiana',     d:'"Comida italiana real", "gastronomía inspirada en Italia" — de sus reseñas' },
+      { n:'Espresso',  p:2000, d:'Café concentrado a alta presión. Doble: $2.500.' },
+      { n:'Americano', p:2000, d:'Espresso diluido.' },
+      { n:'Capuccino', p:2000, d:'Espresso con leche vaporizada y espuma. Con sabor: $2.500.' },
+      { n:'Vienés',    p:3000, d:'Capuccino con crema batida.' },
+      { n:'Latte',     p:2000, d:'Espresso con abundante leche vaporizada. Con sabor: $2.500.' },
+      { n:'Cortado',   p:2000, d:'Espresso con un poco de leche vaporizada. Con sabor: $2.500.' },
     ]
   },
-  helados: {
-    label: 'Helados',
+  frias: {
+    label: 'Bevande fredde',
     items: [
-      { n:'Helado de limonada, albahaca y menta', d:'"¡Increíble!", según una reseña real del local', img:'fotos/local-neon.jpg' },
-      { n:'Helados artesanales', d:'Vitrina propia de helados, a la entrada del local' },
+      { n:'Caffè gelato',  p:4000, d:'Espresso, leche, helado a elección y crema batida.' },
+      { n:'Caffè freddo',  p:3500, d:'Espresso, leche, hielo, sabor a elección y crema batida.' },
+      { n:'Milkshake',     p:3500, d:'Helado a elección, leche y crema batida.' },
+      { n:'Affogato',      p:3600, d:'Espresso, helado, crema batida, sirope de amaretto y galleta de amaretto triturada.' },
     ]
   },
-  cafeteria: {
-    label: 'Café',
+  panini: {
+    label: 'Panini',
     items: [
-      { n:'Café',       d:'"Un impecable café" — cita textual de una de sus reseñas' },
-      { n:'Para llevar', d:'Servicio confirmado en su ficha de Google' },
+      { n:'Della Casa', p:8500, d:'Ciabatta con aceite de oliva, salsa de la casa, prosciutto, mozzarella, pesto, tomates deshidratados y albahaca fresca.' },
+      { n:'Francesco',  p:6500, d:'Ciabatta con aceite de oliva, prosciutto, mozzarella, albahaca fresca y salsa de la casa.' },
+    ]
+  },
+  pizze: {
+    label: 'Pizze',
+    items: [
+      { n:'Margherita', p:13900, d:'Salsa de tomate, mozzarella y albahaca fresca.' },
+      { n:'Prosciutto', p:14900, d:'Salsa de tomate, mozzarella, prosciutto y albahaca fresca.' },
+    ]
+  },
+  dolci: {
+    label: 'Dolci',
+    items: [
+      { n:'Torta del día',      p:3000 },
+      { n:'Tarta o pie del día', p:2500 },
+      { n:'Cornetto',  p:3000, d:'Relleno de queso mascarpone. Sabores nutella, pistacho o clásico.' },
+      { n:'Croissant', p:2000, d:'Relleno de chocolate, cherry o durazno.' },
     ]
   }
 };
+
+const money = n => '$' + n.toLocaleString('es-CL');
 
 /* ---------- RENDER DE LA CARTA ---------- */
 const tabsEl   = document.getElementById('menuTabs');
@@ -83,10 +104,9 @@ Object.keys(MENU).forEach((key, i) => {
       texto.appendChild(desc);
     }
 
-    // Sin precio publicado: "Consultar", nunca un monto inventado.
     const precio = document.createElement('div');
     precio.className = 'price';
-    precio.textContent = 'Consultar';
+    precio.textContent = item.p ? money(item.p) : 'Consultar';
 
     row.appendChild(texto);
     row.appendChild(precio);
